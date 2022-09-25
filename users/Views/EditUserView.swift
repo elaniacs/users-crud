@@ -11,11 +11,11 @@ struct EditUserView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @Environment(\.dismiss) var dismiss
     
-    var user: FetchedResults<User>.Element
-    
     @State private var completeName = ""
     @State private var email = ""
     @State private var password = ""
+    
+    var user: FetchedResults<User>.Element
     
     var body: some View {
         Form {
@@ -30,7 +30,7 @@ struct EditUserView: View {
                     }
             }
             Section(header: Text("PASSWORD")) {
-                TextField("Password", text: $password)
+                SecureTextFieldView(text: $password)
                     .textInputAutocapitalization(.never)
             }
             Section {
@@ -48,9 +48,3 @@ struct EditUserView: View {
         .navigationBarTitle("Update Form")
     }
 }
-
-//struct EditUserView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EditUserView()
-//    }
-//}

@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 
 class DataController: ObservableObject {
+    
     let container = NSPersistentContainer(name: "UserModel")
     
     init() {
@@ -53,8 +54,9 @@ class DataController: ObservableObject {
         save(context: context)
     }
     
-    
-    
-    
-    
+    func deleteUser(user: [User], offsets: IndexSet, context: NSManagedObjectContext) {
+        user.forEach(context.delete)
+        
+        save(context: context)
+    }
 }

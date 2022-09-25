@@ -20,7 +20,7 @@ struct ContentView: View {
         NavigationView {
             VStack(alignment: .leading) {
                 Text("\(totalUsersRegistered()) registered")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.red)
                     .padding(.horizontal)
                 List {
                     ForEach(user) { user in
@@ -60,12 +60,9 @@ struct ContentView: View {
     
     private func deleteUser(offsets: IndexSet) {
         withAnimation {
-            offsets.map { user[$0] }.forEach(managedObjContext.delete)
-            
-            DataController().save(context: managedObjContext)
+            DataController().deleteUser(user:  offsets.map { user[$0] }, offsets: offsets, context: managedObjContext)
         }
     }
-    
     
     private func totalUsersRegistered() -> Int {
         return user.count

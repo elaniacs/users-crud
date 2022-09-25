@@ -17,6 +17,7 @@ struct AddUserView: View {
     
     
     var body: some View {
+        
         Form {
             Section(header: Text("YOUR INFO")) {
                 TextField("Enter your complete name", text: $completeName)
@@ -24,7 +25,7 @@ struct AddUserView: View {
                     .textInputAutocapitalization(.never)
             }
             Section(header: Text("PASSWORD")) {
-                TextField("Password", text: $password)
+                SecureTextFieldView(text: $password)
                     .textInputAutocapitalization(.never)
             }
             Section {
@@ -33,7 +34,7 @@ struct AddUserView: View {
                         if !completeName.isEmpty {
                             DataController().addUser(completeName: completeName, email: email, password: password, context: managedObjContext)
                             
-                             dismiss()
+                            dismiss()
                         }
                     }.buttonStyle(BorderlessButtonStyle())
                     Spacer()
@@ -47,9 +48,3 @@ struct AddUserView: View {
         .navigationBarTitle("Registration Form")
     }
 }
-//
-//struct AddUserView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddUserView()
-//    }
-//}

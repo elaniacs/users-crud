@@ -16,6 +16,7 @@
 		739E6FA428DFA21200C30F05 /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E6FA328DFA21200C30F05 /* AddUserView.swift */; };
 		739E6FA628DFAB0600C30F05 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E6FA528DFAB0600C30F05 /* TimeFormatting.swift */; };
 		739E6FA828DFBA0200C30F05 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E6FA728DFBA0200C30F05 /* EditUserView.swift */; };
+		739E6FAA28DFD83C00C30F05 /* SecureTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E6FA928DFD83C00C30F05 /* SecureTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		739E6FA328DFA21200C30F05 /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
 		739E6FA528DFAB0600C30F05 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		739E6FA728DFBA0200C30F05 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
+		739E6FA928DFD83C00C30F05 /* SecureTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				739E6F8D28DF9FEB00C30F05 /* usersApp.swift */,
 				739E6F9B28DFA02300C30F05 /* DataModel */,
+				739E6FA128DFA17100C30F05 /* Views */,
 				739E6FA228DFA1BF00C30F05 /* Helpers */,
 				739E6F9128DF9FED00C30F05 /* Assets.xcassets */,
 				739E6F9328DF9FED00C30F05 /* Preview Content */,
@@ -81,7 +84,6 @@
 		739E6F9B28DFA02300C30F05 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				739E6FA128DFA17100C30F05 /* Views */,
 				739E6F9C28DFA04C00C30F05 /* UserModel.xcdatamodeld */,
 				739E6F9F28DFA05D00C30F05 /* DataController.swift */,
 			);
@@ -94,6 +96,7 @@
 				739E6F8F28DF9FEB00C30F05 /* ContentView.swift */,
 				739E6FA328DFA21200C30F05 /* AddUserView.swift */,
 				739E6FA728DFBA0200C30F05 /* EditUserView.swift */,
+				739E6FA928DFD83C00C30F05 /* SecureTextFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				739E6FA828DFBA0200C30F05 /* EditUserView.swift in Sources */,
 				739E6F9E28DFA04C00C30F05 /* UserModel.xcdatamodeld in Sources */,
 				739E6FA628DFAB0600C30F05 /* TimeFormatting.swift in Sources */,
+				739E6FAA28DFD83C00C30F05 /* SecureTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
